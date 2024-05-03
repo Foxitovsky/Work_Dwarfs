@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    document.title = "WorkDwarfs - интернет решения"
+    document.title = "WorkDwarfs - интернет-решения"
   }, [])
   return (
     <div className="App">
