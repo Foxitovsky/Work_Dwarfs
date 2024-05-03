@@ -1,17 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import './App.css'; // Стили можно поместить в файл App.css
 
 function App() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Ваш код для отправки данных формы на сервер
+  };
+
   useEffect(() => {
-    document.title = "WorkDwarfs - интернет-решения"
-  }, [])
+    document.title = "WorkDwarfs - Интернет-решения";
+  }
+  )
+
   return (
-    <div className="App">
-      <header className="App-header"> 
-        <h1>Сайт в разработке</h1>
-        <p>Мы работаем над улучшением нашего сайта. Скоро мы вернемся!</p>
-      </header>
+    <div className="App-header container">
+      <h1>Сайт в разработке</h1>
+      <p>Мы работаем над улучшением нашего сайта. Скоро мы вернемся!</p>
+      <div className="form-container">
+        <h2>Свяжитесь с нами</h2>
+        <form onSubmit={handleSubmit}>
+          <input type="text" name="name" placeholder="Ваше имя" value={formData.name} onChange={handleChange} required /><br />
+          <input type="email" name="email" placeholder="Ваш Email" value={formData.email} onChange={handleChange} required /><br />
+          <textarea name="message" placeholder="Ваше сообщение" value={formData.message} onChange={handleChange} required /><br />
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
     </div>
   );
 }

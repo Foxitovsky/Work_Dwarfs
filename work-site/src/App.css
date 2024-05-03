@@ -1,3 +1,7 @@
+h1, h2, p {
+  color: #fff;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +18,7 @@
 }
 
 .App-header {
-  background-color: #120707;
+  background-color: #cd4308;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,11 +37,79 @@
   color: #61dafb;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+form-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+form {
+  width: 100%; /* Занимает всю доступную ширину */
+  max-width: 400px; /* Максимальная ширина формы */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cd4308;
+  border-radius: 4px;
+  box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+  font-size: 14px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #cd4308;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b43f0c;
+}
+
+/* Дополнительные стили для мобильных устройств */
+@media screen and (max-width: 600px) {
+  form {
+    width: 90%;
+    max-width: none; /* Снимаем ограничение на максимальную ширину для мобильных устройств */
   }
 }
