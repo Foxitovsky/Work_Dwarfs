@@ -27,10 +27,18 @@ function App() {
   )
 
   return (
-    <div className="App-header container">
-      <h1>Сайт в разработке</h1>
-      <p>Мы работаем над улучшением нашего сайта. Скоро мы вернемся!</p>
-      <div className="form-container">
+    <div className='background-animation'>
+      <div className="container">
+        <div className="top-menu">
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <h1>Сайт в разработке</h1>
+        <p>Мы работаем над улучшением нашего сайта. Скоро мы вернемся!</p>
+        {/* <div className="form-container">
         <h2>Свяжитесь с нами</h2>
         <form onSubmit={handleSubmit}>
           <input type="text" name="name" placeholder="Ваше имя" value={formData.name} onChange={handleChange} required /><br />
@@ -38,7 +46,9 @@ function App() {
           <textarea name="message" placeholder="Ваше сообщение" value={formData.message} onChange={handleChange} required /><br />
           <button type="submit">Отправить</button>
         </form>
+  </div> */}
       </div>
+
     </div>
   );
 }

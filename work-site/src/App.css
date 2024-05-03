@@ -2,10 +2,6 @@ h1, h2, p {
   color: #fff;
 }
 
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -17,8 +13,7 @@ h1, h2, p {
   }
 }
 
-.App-header {
-  background-color: #cd4308;
+.container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,16 +23,6 @@ h1, h2, p {
   color: white;
 }
 
-.App-main {
-  background-color: #07152f;
-  color: #fff;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -45,14 +30,6 @@ h1, h2, p {
   to {
     transform: rotate(360deg);
   }
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
 }
 
 .logo {
@@ -104,6 +81,55 @@ button {
 
 button:hover {
   background-color: #b43f0c;
+}
+
+.top-menu {
+  color: #fff;
+  padding: 10px 0;
+}
+
+.top-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.top-menu ul li {
+  margin: 0 10px;
+}
+
+.top-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.top-menu ul li a:hover {
+  color: #ddd;
+}
+
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #c96940, #e74f03, #1ea7da, #21dcb1);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+} 
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Дополнительные стили для мобильных устройств */
