@@ -24,6 +24,13 @@ h1, h2, p {
   padding: 0px 10px 0px 10px;
 }
 
+.wd {
+  font-family: "Plaster", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 0;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

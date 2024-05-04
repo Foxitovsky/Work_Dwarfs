@@ -29,6 +29,7 @@ function App() {
   return (
     <div className='background-animation'>
       <div className="container">
+      <p className='wd'>WorkDwarfs</p>
         <div className="top-menu">
           <ul>
             <li><a href="#">О нас</a></li>
@@ -36,7 +37,7 @@ function App() {
             <li><a href="#">Контакты</a></li>
           </ul>
         </div>
-        <h1>Сайт в разработке</h1>
+        {/*<h2>Сайт в разработке</h2> */}
         <p>Мы работаем над улучшением нашего сайта. Скоро мы вернемся!</p>
         {/* <div className="form-container">
         <h2>Свяжитесь с нами</h2>
